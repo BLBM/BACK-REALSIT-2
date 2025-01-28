@@ -36,7 +36,7 @@ public class ReporteParametro {
     private int orden;
 
     @Column(nullable = false)
-    private int descripcion;
+    private String descripcion;
 
     @Column(name = "valor_por_defecto", nullable = false)
     private String valorXDefecto;
@@ -52,7 +52,7 @@ public class ReporteParametro {
     public ReporteParametro() {
     }
 
-    public ReporteParametro(long id, String etiqueta, String tipoObjeto, boolean obligatorio, Reporte reporteId, String codigo, String tipo_dato, int orden, int descripcion, String valorXDefecto, String fechaCreacion, String fechaActualizacion) {
+    public ReporteParametro(long id, String etiqueta, String tipoObjeto, boolean obligatorio, Reporte reporteId, String codigo, String tipo_dato, int orden, String descripcion, String valorXDefecto, String fechaCreacion, String fechaActualizacion) {
         this.id = id;
         this.etiqueta = etiqueta;
         this.tipoObjeto = tipoObjeto;
@@ -139,11 +139,11 @@ public class ReporteParametro {
         return this;
     }
 
-    public int getDescripcion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public ReporteParametro setDescripcion(int descripcion) {
+    public ReporteParametro setDescripcion(String descripcion) {
         this.descripcion = descripcion;
         return this;
     }

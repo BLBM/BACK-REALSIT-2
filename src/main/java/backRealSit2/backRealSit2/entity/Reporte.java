@@ -17,7 +17,7 @@ public class Reporte {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long reportesid;
 
-    @OneToMany(mappedBy = "reporte", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "reporteId", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ReporteParametro> parametros = new ArrayList<>();
 
     @Column(nullable = false)
